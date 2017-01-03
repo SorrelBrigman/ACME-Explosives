@@ -2,7 +2,7 @@
 //allows bootstrap dropdowns to function
 $('.dropdown-toggle').dropdown();
 
-//changes the text of the left menu
+//changes the text of the cat menu
 $(function(){
 
     $(".dropdown li a").click(function(){
@@ -13,9 +13,24 @@ $(function(){
    });
 });
 
+//changes the text of the type menu
+
+function typeChanges() {
+  $(function(){
+
+      $(".dropdown li a").click(function(){
+
+        $(".btn-warning:first-child").text($(this).text());
+        $(".btn-warning:first-child").val($(this).text());
+
+     });
+  });
+};
+
 
 //global var
-  var userSelection
+  var userSelection;
+  var typeSelection;
   var catNumb;
   var categories;
   var types;
@@ -63,12 +78,21 @@ Promise.all([promise1, promise2, promise3])
   });
 
 
+//function to get type selection
+
+function getTypes() {
+  typeSelection = $(".btn-warning:first-child").val();
+  console.log("typeSelection", typeSelection)
+
+  //run function to get cat number value
+
+}
 
 // Create new dropdown that includes types
 function typeDropdown() {
   console.log("typeDropdown")
-  var typeMenu = `<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">Category of Explosives<span class="caret"></span></button>
+  var typeMenu = `<button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">Types of ${userSelection}<span class="caret"></span></button>
           <ul class="dropdown-menu types" aria-labelledby="dropdownMenu1">`;
   for(var i=0; i < types.types.length; i++) {
     if(types.types[i].category === catNumb){
@@ -78,10 +102,13 @@ function typeDropdown() {
   typeMenu += `</ul>`
   //add to page
   $(".types").html(typeMenu);
+  //bind event listener
   reAddEvents();
+
+  typeChanges();
 }
 
-//function to turn user selection into numeric value
+//function to turn user cat selection into numeric value
 
 function parseCat() {
   for(var i = 0; i < categories.categories.length; i++) {
@@ -90,6 +117,7 @@ function parseCat() {
         console.log("catNumb: ", catNumb)
       }
   }
+  //adds function to have the text of dropdown equate to user selection
   typeDropdown();
 };
 //function to get data from user Selection of dropDown
@@ -102,9 +130,11 @@ function getCategories() {
   parseCat();
 }
 
-//listen for change of selection
+//listen for change of selection, run everytime new content added to page
 function reAddEvents() {
+  //upon selection of the category, the get Cat function runs
   $(".cat").click(getCategories);
-  // $(".types").click(addProducts);
+  //upon selection of type, the get
+  $(".types").click(getTypes);
 };
 reAddEvents();
