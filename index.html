@@ -6,9 +6,30 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-3">Acme Explosives!</h1>
+        <p class="lead">Meeting your everyday explosive needs.</p>
+        <hr class="my-2">
+        <p>What type of explosives do you need today? Please select from below.</p>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">Category of Explosives<span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">Fireworks</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Explosives</a></li>
+          </ul>
+        </div> <!-- end of  dropdown -->
+      </div> <!-- end of jumbotron -->
+      <div id="listOfExplosives">
 
-  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script type="text/javascript" src="bower_components/jquery.dist/jquery.js"></script>
+      </div> <!-- end of list of explosive's div -->
+    </div><!--  end of container -->
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
