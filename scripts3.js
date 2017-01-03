@@ -2,7 +2,7 @@
 //allows bootstrap dropdowns to function
 $('.dropdown-toggle').dropdown();
 
-//changes the text of the cat menu
+//changes the text of the cat menu on user selection
 $(function(){
 
     $(".dropdown li a").click(function(){
@@ -13,7 +13,7 @@ $(function(){
    });
 });
 
-//changes the text of the type menu
+//changes the text of the type menu on user selction
 
 function typeChanges() {
   $(function(){
@@ -32,6 +32,7 @@ function typeChanges() {
   var userSelection;
   var typeSelection;
   var catNumb;
+  var typeNumb;
   var categories;
   var types;
   var products;
@@ -74,17 +75,55 @@ Promise.all([promise1, promise2, promise3])
     categories = values[0];
     types = values[1];
     products = values[2]
-    //additional function to call back?
+
   });
+
+
+//function to get numeric value of type
+
+function parseType() {
+  for(var i = 0; i < types.types.length; i++) {
+      if (typeSelection === types.types[i].name){
+        typeNumb = types.types[i].id;
+        console.log("typeNumb: ", typeNumb)
+      }
+  }
+  //function to fill div
+  listProducts();
+}
+
+
+//function to fill div
+
+function listProducts() {
+
+  var productHtml = "";
+  for(var i = 0; i < products.products.length; i++) {
+    for (var key in products.products[i]) {
+      if(products.products[i][key].type === typeNumb) {
+        console.log(products.products[i][key].name);
+        productHtml += `<div class="card card-block">`;
+        productHtml += `<h4 class="card-title">Name: ${products.products[i][key].name} </h4>`;
+        productHtml += `<p class="card-text">Description: ${products.products[i][key].description}</p>`
+        productHtml += `<a href="#" class="card-link">Type: ${typeSelection}</a>`;
+        productHtml += `<a href="#" class="card-link">Category: ${userSelection}</a>`;
+        productHtml += `</div>`;
+      }
+    }
+  }
+  $("#listOfExplosives").html(productHtml);
+};
+
 
 
 //function to get type selection
 
 function getTypes() {
   typeSelection = $(".btn-warning:first-child").val();
-  console.log("typeSelection", typeSelection)
+  console.log("typeSelection", typeSelection);
 
-  //run function to get cat number value
+  //run function to get type number value
+  parseType();
 
 }
 
