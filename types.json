@@ -5,6 +5,42 @@
             "category": 0,
             "name": "personal",
             "description": "Fireworks intended for recreational use during holiday celebrations"
+        },
+        {
+            "id": 1,
+            "category": 0,
+            "name": "neighborhood",
+            "description": "Fireworks intended to show off to neighbors how awesome your taste in fireworks really is"
+        },
+        {
+            "id": 2,
+            "category": 0,
+            "name": "commercial",
+            "description": "Fireworks intended for large corporations and public events"
+        },
+        {
+            "id": 3,
+            "category": 1,
+            "name": "landscape",
+            "description": "explosives for removing small rocks and stumps"
+        },
+        {
+            "id": 4,
+            "category": 1,
+            "name": "landmover",
+            "description": "Explosives for minor changing of land profile"
+        },
+        {
+            "id": 5,
+            "category": 1,
+            "name": "mountainmover",
+            "description": "Explosives designed for breaking through groundrock"
+        },
+        {
+            "id": 6,
+            "category": 1,
+            "name": "buildingDemo",
+            "description": "Controled explosives for commercial building demolition"
         }
     ]
 }
