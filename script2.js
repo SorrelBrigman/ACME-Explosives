@@ -19,6 +19,8 @@ $(function(){
 //global var
   var userSelection = "";
   var catID;
+  var thisCat;
+  var currentType;
 
 //code to get json files via promises
 
@@ -46,7 +48,7 @@ function getTypes() {
       url: "types.json"
     })
     .done(function(dataType, textStatus, XHR) {
-      resolve(dataType.id);
+      resolve(dataType);
     })
   })
 }
@@ -70,7 +72,6 @@ function getProducts() {
 $(".dropdown-menu").click(function() {
   getCategories().then(function(dataCat){
     var whatCat = dataCat;
-    var thisCat;
     console.log("whatCat", whatCat.categories[0].id);
     for(var i = 0; i < whatCat.categories.length; i++) {
       if (userSelection === whatCat.categories[i].name){
@@ -78,8 +79,27 @@ $(".dropdown-menu").click(function() {
       }
     }
     console.log("thiscat: ", thisCat)
-    getTypes(thisCat).then(function(val){
-      console.log(val);
+    getTypes().then(function(dataType){
+      console.log(dataType);
+      for(var i = 0; i < dataType.types.length; i++) {
+        if(thisCat === dataType.types[i].category) {
+          currentType.push(dataType.types[i]);
+        };
+      };
+      addTypes();
+
     })
-  })
+  }).then()
 });
+
+
+
+
+
+//add the types to the page
+
+function addTypes() {
+  $.each(currentType, function(){
+//iterate through and add a type dropdown.
+  })
+}
