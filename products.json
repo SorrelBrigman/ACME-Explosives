@@ -6,5 +6,165 @@
             "name": "Fairy Sparklers",
             "description": "Multi-colored sparklers that are safe for any age."
         }
+    },
+    {
+        "garden_fountain": {
+            "id": 1,
+            "type": 0,
+            "name": "Garden Fountain",
+            "description": "Multi-colored foundtain, good for family use, supervision children under 12."
+        }
+    },
+    {
+        "smoke_bombs": {
+            "id": 2,
+            "type": 0,
+            "name": "Smoke Bombs",
+            "description": "Multi-colored smoke release are safe for any age."
+        }
+    },
+    {
+        "patriach": {
+            "id": 3,
+            "type": 1,
+            "name": "Patriach",
+            "description": "Multi-colored canon with 4 shots."
+        }
+    },
+    {
+        "boom_chicka": {
+            "id": 4,
+            "type": 1,
+            "name": "Boom Chicka",
+            "description": "Bright, noisey canon with 3 multi-tiered shots."
+        }
+    },
+    {
+        "justice_league": {
+            "id": 5,
+            "type": 1,
+            "name": "Justic League",
+            "description": "Red, white and blue canon with added boom and whistle."
+        }
+    },
+    {
+        "ballpark": {
+            "id": 6,
+            "type": 2,
+            "name": "Ballpark",
+            "description": "Multi-colored canon show with 5 minutes of fireworks, spaced 30 seconds apart."
+        }
+    },
+    {
+        "line_item": {
+            "id": 7,
+            "type": 2,
+            "name": "Line Item",
+            "description": "Budget option, 90 second canon show with shells spaced 20 seconds apart."
+        }
+    },
+    {
+        "kitchen_sink": {
+            "id": 8,
+            "type": 2,
+            "name": "Kitchen Sink",
+            "description": "Our most intensive fireworks show, with 7 solid minutes of uninterupted shells"
+        }
+    },
+    {
+        "stump_no_more": {
+            "id": 9,
+            "type": 3,
+            "name": "Stump No More",
+            "description": "Small landscape explosive for removing small stumps"
+        }
+    },
+    {
+        "keep_rocking": {
+            "id": 10,
+            "type": 3,
+            "name": "Keep Rocking",
+            "description": "Small landscape explosive designed specifically for breaking up rocks into managable pieces."
+        }
+    },
+    {
+        "garden_maker": {
+            "id": 11,
+            "type": 3,
+            "name": "Garden Maker",
+            "description": "Small landscaping explosive designed to break up everything in a 2 foot radius"
+        }
+    },
+    {
+        "molehill_mover": {
+            "id": 12,
+            "type": 4,
+            "name": "Molehill Mover",
+            "description": "Designed for minor landscape renovation, 2 feet or less."
+        }
+    },
+    {
+        "hill_mover": {
+            "id": 13,
+            "type": 4,
+            "name": "Hill Mover",
+            "description": "Designed to reshape landscape 4 feet in height or less."
+        }
+    },
+    {
+        "yard_be_gone": {
+            "id": 14,
+            "type": 4,
+            "name": "Yard Be Gone",
+            "description": "Our most powerful noncommerical explosive, designed to level everything in a 20 foot radius."
+        }
+    },
+    {
+        "dirt_mountain_mover": {
+            "id": 15,
+            "type": 5,
+            "name": "Dirt Mountain Mover",
+            "description": "Commerical grade explosive, designed to reshape dirt landscape."
+        }
+    },
+    {
+        "stone_moutain_mover": {
+            "id": 16,
+            "type": 5,
+            "name": "Stone Mountain Mover",
+            "description": "Commerical grade explosive, designed to reshape bedrock."
+        }
+    },
+    {
+        "what_moutain": {
+            "id": 17,
+            "type": 5,
+            "name": "What Mountain",
+            "description": "Designed for maximum reshaping of landscape, regardless of composition."
+        }
+    },
+    {
+        "shack_killer": {
+            "id": 18,
+            "type": 6,
+            "name": "Shack Killer",
+            "description": "Commerical grade explosive, designed to level small buildings."
+        }
+    },
+    {
+        "mansion_killer": {
+            "id": 19,
+            "type": 6,
+            "name": "Mansion Killer",
+            "description": "Commerical grade explosive, designed to level medium building."
+        }
+    },
+    {
+        "downtown_killer": {
+            "id": 20,
+            "type": 6,
+            "name": "Downtown Killer",
+            "description": "Commerical grade explosive, designed to level city blocks."
+        }
     }]
 }
