@@ -76,7 +76,6 @@ addEvents();
 
 function getCategories() {
   userSelection = $(".btn-default:first-child").val();
-  console.log("userSelection", userSelection)
 
   //run function to get cat number value
   parseCat();
@@ -88,7 +87,7 @@ function parseCat() {
   for(var i = 0; i < categories.categories.length; i++) {
       if (userSelection === categories.categories[i].name){
         catNumb = categories.categories[i].id;
-        console.log("catNumb: ", catNumb)
+
           //adds function to have the text of dropdown equate to user selection
         typeDropdown();
       }
@@ -110,11 +109,11 @@ function typeDropdown() {
   typeMenu += `</ul>`
   //add to page
   $(".types").html(typeMenu);
+
   //bind event listener
   //upon selection of type
   $(".types").click(getTypes);
-  console.log("event bounds to button")
-
+  //calls the type change button
   typeChanges();
 }
 
@@ -150,7 +149,7 @@ function parseType() {
   for(var i = 0; i < types.types.length; i++) {
       if (typeSelection === types.types[i].name){
         typeNumb = types.types[i].id;
-        console.log("typeNumb: ", typeNumb)
+
       }
   }
   //function to fill div
@@ -161,12 +160,15 @@ function parseType() {
 //function to fill div
 
 function listProducts() {
-
+  //start with empty string
   var productHtml = "";
+  //interate through the products array held in products
   for(var i = 0; i < products.products.length; i++) {
+    //testing for keys inside each instance of the product.product array
     for (var key in products.products[i]) {
-      console.log("I am i:", i);
+      //if the current interation's type matches the selected type
       if(products.products[i][key].type === typeNumb) {
+        //print that product to a product card
         console.log(products.products[i][key].name);
         productHtml += `<div class="card card-block">`;
         productHtml += `<h4 class="card-title">Name: ${products.products[i][key].name} </h4>`;
@@ -177,5 +179,6 @@ function listProducts() {
       }
     }
   }
+  //add created html string to the list of explosives div on the page
   $("#listOfExplosives").html(productHtml);
 };
